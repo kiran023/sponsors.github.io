@@ -1,15 +1,15 @@
 const slider = document.querySelector('.slider');
 const innerSlider = document.querySelector('.inner-slider');
-const wid = document.querySelector('.box').offsetWidth;
+const wid = document.querySelector('.box').offsetWidth+ 22;
 let x, y, l;
-let cnt=1;
+let cnt=0;
 let pressed = false;
 
  intervalId = setInterval(function () {
     innerSlider.style.left= `-${cnt*wid}px`
     cnt++;
     if(cnt==5)
-   cnt=1;
+   cnt=0;
    },2000);
 
 slider.addEventListener('mousedown', (e) => {
